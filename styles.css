@@ -2599,16 +2599,6 @@ footer svg {
   }
 }
 
-/* Make tagline smaller ONLY on mobile */
-@media (max-width: 768px) {
-  .tagline {
-    font-size: 0.8rem !important;
-    line-height: 1.2;
-    white-space: normal;
-    word-break: break-word;
-  }
-}
-
 @media (max-width: 480px) {
   header {
     padding: 16px 20px;
@@ -2725,5 +2715,121 @@ footer svg {
     box-shadow: none;
     border: 1px solid #ddd;
     page-break-inside: avoid;
+  }
+}
+@media (max-width: 840px) {
+  .menu-btn {
+    display: inline-flex !important;
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    z-index: 10001;
+    min-width: 52px;
+    min-height: 52px;
+    font-size: 1.4rem;
+    align-items: center;
+    justify-content: center;
+    background: var(--charcoal);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+
+  nav[aria-label="Main Navigation"] ul {
+    position: fixed;
+    top: 0;
+    left: -100vw;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.99);
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+    transition: left 0.4s ease;
+    z-index: 10000;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.25);
+  }
+
+  nav[aria-label="Main Navigation"] ul.open {
+    left: 0;
+  }
+
+  nav[aria-label="Main Navigation"] ul li {
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    width: 80%;
+    text-align: center;
+    list-style: none;
+  }
+
+  nav[aria-label="Main Navigation"] ul.open li {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  nav[aria-label="Main Navigation"] ul li a {
+    padding: 16px 24px;
+    font-size: 1.2rem;
+    width: 100%;
+    display: block;
+    min-height: 56px;
+  }
+  
+  nav[aria-label="Main Navigation"] ul li .btn {
+    padding: 18px 32px;
+    font-size: 1.1rem;
+    margin-top: 10px;
+  }
+  
+  header {
+    padding: 12px 16px;
+  }
+
+  .brand {
+    max-width: calc(100% - 70px);
+    transition: all var(--transition-smooth);
+  }
+
+  .brand h1 {
+    font-size: 0.95rem;
+    transition: all var(--transition-smooth);
+  }
+
+  .tagline {
+    font-size: 0.65rem;
+    opacity: 1;
+    max-height: 30px;
+    transition: opacity 0.3s ease, max-height 0.3s ease;
+    line-height: 1.2;
+  }
+
+  header.shrink .brand {
+    justify-content: center;
+    margin: 0 auto;
+    max-width: none;
+  }
+
+  header.shrink .brand h1 {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+
+  header.shrink .tagline {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+  }
+
+  .logo {
+    width: 50px;
+    height: 50px;
   }
 }
