@@ -1,0 +1,16 @@
+RewriteEngine On
+
+# Custom URL mappings (friendly URLs to actual files)
+RewriteRule ^home$ index.html [L]
+RewriteRule ^team$ meet-the-team.html [L]
+RewriteRule ^booking$ book-a-consultation.html [L]
+RewriteRule ^apply$ apply-now.html [L]
+
+# Remove .html extension for all other pages
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^(.*)$ $1.html [L]
+
+# Redirect .html URLs to clean URLs (force clean URLs)
+RewriteCond %{THE_REQUEST} ^GET\ /[^?\s]+\.html
+RewriteRule ^(.*)\.html$ /$1 [R=301,L]
