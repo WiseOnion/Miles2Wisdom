@@ -2599,6 +2599,16 @@ footer svg {
   }
 }
 
+/* Make tagline smaller ONLY on mobile */
+@media (max-width: 768px) {
+  .tagline {
+    font-size: 0.8rem !important;
+    line-height: 1.2;
+    white-space: normal;
+    word-break: break-word;
+  }
+}
+
 @media (max-width: 480px) {
   header {
     padding: 16px 20px;
