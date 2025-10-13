@@ -2811,15 +2811,8 @@ footer svg {
     line-height: 1.2;
   }
 
-  header.shrink .brand {
-    justify-content: center;
-    margin: 0 auto;
-    max-width: none;
-  }
-
   header.shrink .brand h1 {
     font-size: 1.1rem;
-    text-align: center;
   }
 
   header.shrink .tagline {
