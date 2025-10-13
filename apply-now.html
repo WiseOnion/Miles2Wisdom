@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Apply Now – Miles 2 Wisdom Counseling Services</title>
+<meta name="description" content="Join our team – apply to Miles 2 Wisdom Counseling Services.">
+<meta property="og:title" content="Apply Now – Miles 2 Wisdom Counseling Services">
+<meta property="og:description" content="Join our compassionate team of mental health professionals.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="Logo.jpg">
+<meta name="theme-color" content="#A9C9FF">
+
+<!-- Favicon -->
+<link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+<link rel="manifest" href="favicon_io/site.webmanifest">
+<link rel="shortcut icon" href="favicon_io/favicon.ico">
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Lora:wght@400;600;700&display=swap" rel="stylesheet">
+
+<!-- Main Stylesheet -->
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Header -->
+<header>
+  <div class="container nav">
+    <a class="brand" href="index.html">
+      <img src="Logo.jpg" alt="Miles 2 Wisdom Logo" class="logo">
+      <div class="brand-text">
+        <h1>Miles 2 Wisdom Counseling</h1>
+        <div class="tagline">Guiding You from Where You Are to Where You Want to Be</div>
+      </div>
+    </a>
+    <nav aria-label="Main Navigation">
+      <button class="menu-btn" aria-expanded="false" aria-controls="menu" aria-label="Toggle menu">☰</button>
+      <ul id="menu" role="menu">
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="meet-the-team.html">Team</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="book-a-consultation.html" class="btn">Book A Consultation</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="form-container">
+    <h1 class="page-title">Join Our Team</h1>
+    <p class="lead">We're always looking for compassionate, skilled people to join our team. Fill out the form below and attach your resume. We'll review applications and contact qualified candidates.</p>
+
+    <div class="form-grid apply-form-grid">
+      <!-- Main Application Form Card -->
+      <div class="card">
+        <h2 style="margin-top: 0; margin-bottom: 24px; font-family: Lora, serif;">Application Form</h2>
+
+        <form id="applyForm" method="POST" action="https://formspree.io/f/xovkjzvn" enctype="multipart/form-data" novalidate>
+          <div class="field-row" style="display:flex; gap:20px; flex-wrap:wrap;">
+            <div class="field" style="flex:1; min-width:200px;">
+              <label for="fullName">Full Name *</label>
+              <input id="fullName" name="fullName" type="text" required placeholder="Jane Doe" autocomplete="name">
+            </div>
+
+            <div class="field" style="flex:1; min-width:200px;">
+              <label for="email">Email Address *</label>
+              <input id="email" name="email" type="email" required placeholder="you@example.com" autocomplete="email">
+            </div>
+          </div>
+
+          <div class="field-row" style="display:flex; gap:20px; flex-wrap:wrap; margin-top:16px;">
+            <div class="field" style="flex:1; min-width:200px;">
+              <label for="phone">Phone (optional)</label>
+              <input id="phone" name="phone" type="tel" placeholder="(xxx) xxx-xxxx" autocomplete="tel">
+            </div>
+
+            <div class="field" style="flex:1; min-width:200px;">
+              <label for="position">Position Applying For *</label>
+              <input id="position" name="position" type="text" required placeholder="e.g., Clinical Intern, Front Desk">
+            </div>
+          </div>
+
+          <div class="field" style="margin-top:16px;">
+            <label for="availability">Availability</label>
+            <input id="availability" name="availability" type="text" placeholder="Weekday mornings, evenings, weekends, etc.">
+            <div class="field-help">Let us know your preferred days and times.</div>
+          </div>
+
+          <div class="field" style="margin-top:16px;">
+            <label for="cover">Cover Letter / Message *</label>
+            <textarea id="cover" name="cover" required rows="6" placeholder="Tell us about your experience and why you'd like to join Miles 2 Wisdom."></textarea>
+          </div>
+
+          <div class="field" style="margin-top:16px;">
+            <label for="resume">Upload Resume (PDF, DOCX) – optional</label>
+            <input id="resume" name="resume" type="file" accept=".pdf,.doc,.docx" class="file-input" aria-describedby="resumeHelp">
+            <div id="resumeHelp" class="file-info">Max file size: 5 MB. Accepted: .pdf, .doc, .docx</div>
+            <div id="fileError" class="error-text" role="alert" style="display:none;"></div>
+          </div>
+
+          <div class="field checkbox-field" style="margin-top:16px;">
+            <label class="checkbox-label">
+              <input id="consent" name="consent" type="checkbox" required>
+              <span class="checkbox-text">I consent to Miles 2 Wisdom contacting me about this application. I understand this may include a background check if required for the position.</span>
+            </label>
+          </div>
+
+          <div class="button-row" style="margin-top:20px; display:flex; gap:12px; align-items:center; flex-wrap:wrap;">
+            <button type="submit" class="submit-btn">Submit Application</button>
+            <div id="formStatus" class="small-note" aria-live="polite" style="margin-left:8px;"></div>
+          </div>
+
+          <!-- Success Message -->
+          <div id="formSuccess" class="success-card" role="status" aria-live="polite" style="margin-top:20px;">
+            <h3>Thank you – we've received your application!</h3>
+            <p>Your application has been submitted successfully. We'll review it and contact you if your qualifications are a match for our current openings.</p>
+          </div>
+
+          <!-- Error Message -->
+          <div id="formError" class="error-card" role="alert" aria-live="assertive" style="margin-top:20px;">
+            <h3>Submission Error</h3>
+            <p>There was a problem submitting your application. Please try again, check your file size/type, or email your resume to <strong>miles2wisdom@gmail.com</strong>.</p>
+          </div>
+        </form>
+      </div>
+
+      <!-- Sidebar Card -->
+      <aside class="card sidebar-card">
+        <h3 style="margin-top: 0; font-family: Lora, serif;">Why Join Us?</h3>
+
+        <div class="info-section">
+          <h4>Our Culture</h4>
+          <p>We foster a collaborative, supportive environment where every team member can grow professionally while making a meaningful impact.</p>
+        </div>
+
+        <div class="info-section">
+          <h4>Benefits</h4>
+          <ul>
+            <li>Competitive compensation</li>
+            <li>Professional development opportunities</li>
+            <li>Flexible scheduling options</li>
+            <li>Supportive team environment</li>
+          </ul>
+        </div>
+
+        <div class="info-section">
+          <h4>Current Openings</h4>
+          <p>We're always accepting applications for:</p>
+          <ul>
+            <li>Licensed Clinical Social Workers</li>
+            <li>Clinical Interns</li>
+            <li>Administrative Support</li>
+            <li>Front Desk Staff</li>
+          </ul>
+        </div>
+
+        <div class="info-section">
+          <h4>Questions?</h4>
+          <p>Contact us at <a href="tel:9107593330" style="color: inherit;"><strong>(910) 759-3330</strong></a> or email <a href="mailto:miles2wisdom@gmail.com" style="color: inherit;"><strong>miles2wisdom@gmail.com</strong></a> for more information.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+</main>
+
+<!-- CTA Bar -->
+<section class="cta-bar">
+  <div class="cta-container">
+    <div class="cta-section">
+      <h3>Questions?</h3>
+      <p>CALL US AT <a href="tel:9107593330" style="color: inherit;"><strong>(910) 759-3330</strong></a> FOR ASSISTANCE WITH YOUR CONSULTATION.</p>
+      <a href="tel:9107593330" class="btn">Call Now</a>
+    </div>
+    <div class="cta-divider"></div>
+    <div class="cta-section">
+      <h3>Join Us</h3>
+      <p>WE ARE ALWAYS LOOKING FOR INCREDIBLE PEOPLE TO JOIN OUR TEAM!</p>
+      <a href="apply-now.html" class="btn">Apply Now</a>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="container footgrid">
+    <div>
+      <strong>Miles 2 Wisdom Counseling Services, LLC</strong>
+      <p class="disclaimer">Not a crisis service. Call 911 or 988 in emergencies.</p>
+      <p style="margin-top: 10px;">
+        <a href="tel:9107593330" style="color: #cbd5e1; display: inline-flex; align-items: center; gap: 8px;">
+          <svg style="width: 16px; height: 16px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+          </svg>
+          (910) 759-3330
+        </a><br>
+        <a href="mailto:miles2wisdom@gmail.com" style="color: #cbd5e1; display: inline-flex; align-items: center; gap: 8px; margin-top: 6px;">
+          <svg style="width: 16px; height: 16px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+          </svg>
+          miles2wisdom@gmail.com
+        </a>
+      </p>
+    </div>
+    <div>
+      <strong>Navigate</strong>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+      </ul>
+    </div>
+    <div>
+      <strong>Connect</strong>
+      <ul>
+        <li><a href="https://www.facebook.com/Miles2Wisdom" target="_blank" rel="noopener">Facebook</a></li>
+        <li><a href="#" aria-label="LinkedIn coming soon">LinkedIn</a></li>
+      </ul>
+    </div>
+    <div class="footer-logo">
+      <img src="Logo.jpg" alt="Miles 2 Wisdom Logo">
+    </div>
+    <div class="footer-copyright subtle">
+      © <span id="year"></span> Miles 2 Wisdom Counseling Services, LLC.
+    </div>
+  </div>
+</footer>
+
+<!-- Main JavaScript -->
+<script src="scripts.js"></script>
+
+</body>
+</html>
