@@ -166,12 +166,14 @@
 (() => {
   const slides = document.querySelectorAll('.slideshow-inner img');
   const dots = document.querySelectorAll('.slideshow-dots .dot');
-  
+
   if (slides.length === 0) return; // Exit if no slideshow
 
   let currentSlide = 0;
   let slideInterval;
   const slideDelay = 15000;
+  let touchStartX = 0;
+  let touchEndX = 0;
 
   function showSlide(index) {
     slides.forEach((img, i) => {
@@ -185,6 +187,10 @@
 
   function nextSlide() {
     showSlide((currentSlide + 1) % slides.length);
+  }
+
+  function prevSlide() {
+    showSlide((currentSlide - 1 + slides.length) % slides.length);
   }
 
   function startSlideshow() {
@@ -209,6 +215,33 @@
   if (slideshow) {
     slideshow.addEventListener('mouseenter', pauseSlideshow);
     slideshow.addEventListener('mouseleave', startSlideshow);
+
+    // Touch/swipe functionality for mobile
+    slideshow.addEventListener('touchstart', (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+      pauseSlideshow();
+    }, { passive: true });
+
+    slideshow.addEventListener('touchend', (e) => {
+      touchEndX = e.changedTouches[0].screenX;
+      handleSwipe();
+      startSlideshow();
+    }, { passive: true });
+  }
+
+  function handleSwipe() {
+    const swipeThreshold = 50; // Minimum distance for swipe
+    const diff = touchStartX - touchEndX;
+
+    if (Math.abs(diff) > swipeThreshold) {
+      if (diff > 0) {
+        // Swiped left - next slide
+        nextSlide();
+      } else {
+        // Swiped right - previous slide
+        prevSlide();
+      }
+    }
   }
 
   // Initialize
@@ -540,6 +573,21 @@
       } else {
         this.classList.remove('valid');
         this.classList.add('error');
+      }
+    });
+  });
+})();
+
+// ========================================
+// 11. TEAM PAGE - CARD CLICKS (only runs if team cards exist)
+// ========================================
+(() => {
+  const teamCards = document.querySelectorAll('.team-card:not(.non-clickable)');
+  teamCards.forEach(card => {
+    card.addEventListener('click', () => {
+      const href = card.dataset.href;
+      if (href) {
+        window.location.href = href;
       }
     });
   });

@@ -12,11 +12,11 @@
 <meta name="theme-color" content="#A9C9FF">
 
 <!-- Favicon -->
-<link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
-<link rel="manifest" href="favicon_io/site.webmanifest">
-<link rel="shortcut icon" href="favicon_io/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon_io/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon_io/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon_io/favicon-16x16.png">
+<link rel="manifest" href="../assets/favicon_io/site.webmanifest">
+<link rel="shortcut icon" href="../assets/favicon_io/favicon.ico">
 
 <!-- Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,15 +24,15 @@
 <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Lora:wght@400;600;700&display=swap" rel="stylesheet">
 
 <!-- Main Stylesheet -->
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../assets/css/styles.css">
 </head>
 <body>
 
 <!-- Header -->
 <header>
   <div class="container nav">
-    <a class="brand" href="index.html">
-      <img src="Logo.jpg" alt="Miles 2 Wisdom Logo" class="logo">
+    <a class="brand" href="../index.html">
+      <img src="../assets/images/Logo.jpg" alt="Miles 2 Wisdom Logo" class="logo">
       <div class="brand-text">
         <h1>Miles 2 Wisdom Counseling</h1>
         <div class="tagline">Guiding You from Where You Are to Where You Want to Be</div>
@@ -41,7 +41,7 @@
     <nav aria-label="Main Navigation">
       <button class="menu-btn" aria-expanded="false" aria-controls="menu" aria-label="Toggle menu">☰</button>
       <ul id="menu" role="menu">
-        <li><a href="index.html">Home</a></li>
+        <li><a href="../index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="services.html">Services</a></li>
         <li><a href="meet-the-team.html">Team</a></li>
@@ -63,8 +63,8 @@
     <section class="section">
       <h2 class="section-title">Clinical Leadership</h2>
       <div class="team-grid">
-        <div class="card team-card" onclick="location.href='team-files/marva-johnson.html'">
-          <img src="team-pics/Marva Johnson.jpg" alt="Marva Johnson">
+        <div class="card team-card" data-href="team/marva-johnson.html">
+          <img src="../assets/images/team-pics/Marva Johnson.jpg" alt="Marva Johnson">
           <h3>Marva Johnson, LCMHC-S</h3>
           <p>Licensed Clinical Mental Health Counselor Supervisor</p>
           <div class="team-role">Counseling Supervisor</div>
@@ -76,14 +76,14 @@
     <section class="section">
       <h2 class="section-title">Counseling Team</h2>
       <div class="team-grid">
-        <div class="card team-card" onclick="location.href='team-files/bernard-cameron.html'">
-          <img src="team-pics/Bernard Cameron.jpg" alt="Bernard Cameron">
+        <div class="card team-card" data-href="team/bernard-cameron.html">
+          <img src="../assets/images/team-pics/Bernard Cameron.jpg" alt="Bernard Cameron">
           <h3>Bernard Cameron, MA</h3>
           <p>Specializes in anxiety, depression, trauma-informed care and adolescent counseling</p>
           <div class="team-role">Counseling Intern</div>
         </div>
-        <div class="card team-card" onclick="location.href='team-files/tonia-spear.html'">
-          <img src="team-pics/Tonia-Spear.jpg" alt="Tonia Spear">
+        <div class="card team-card" data-href="team/tonia-spear.html">
+          <img src="../assets/images/team-pics/Tonia-Spear.jpg" alt="Tonia Spear">
           <h3>Tonia Spear, MA</h3>
           <p>Focus on family therapy and couples counseling</p>
           <div class="team-role">Counseling Intern</div>
@@ -96,19 +96,19 @@
       <h2 class="section-title">Support Team</h2>
       <div class="team-grid">
         <div class="card team-card non-clickable">
-          <img src="team-pics/Jasmine-Evans.jpg" alt="Jasmine Evans">
+          <img src="../assets/images/team-pics/Jasmine-Evans.jpg" alt="Jasmine Evans">
           <h3>Jasmine Evans</h3>
           <p>Coordinates telehealth services and virtual care delivery</p>
           <div class="team-role">Telehealth Coordinator</div>
         </div>
         <div class="card team-card non-clickable">
-          <img src="team-pics/Jessica-Green.jpg" alt="Jessica Green">
+          <img src="../assets/images/team-pics/Jessica-Green.jpg" alt="Jessica Green">
           <h3>Jessica Green</h3>
           <p>Patient intake coordination and appointment scheduling</p>
           <div class="team-role">Intake Coordinator</div>
         </div>
         <div class="card team-card non-clickable">
-          <img src="team-pics/Wisdom-Johnson.jpg" alt="Wisdom Johnson">
+          <img src="../assets/images/team-pics/Wisdom-Johnson.jpg" alt="Wisdom Johnson">
           <h3>Wisdom Johnson</h3>
           <p>Technical support and system maintenance specialist</p>
           <div class="team-role">IT Support Specialist</div>
@@ -118,7 +118,7 @@
 
     <!-- Join Our Team Section -->
     <section class="section join-team-section">
-      <h2 class="section-title" style="text-align: center; margin-bottom: 40px;">Join Our Team</h2>
+      <h2 class="section-title text-center margin-bottom-40">Join Our Team</h2>
       
       <div class="join-team-grid">
         <!-- Join Info Card -->
@@ -213,14 +213,14 @@
       <strong>Miles 2 Wisdom Counseling Services, LLC</strong>
       <p class="disclaimer">Not a crisis service. Call 911 or 988 in emergencies.</p>
       <p style="margin-top: 10px;">
-        <a href="tel:9107593330" style="color: #cbd5e1; display: inline-flex; align-items: center; gap: 8px;">
-          <svg style="width: 16px; height: 16px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <a href="tel:9107593330" class="color-cbd5e1 display-inline-flex align-items-center gap-8">
+          <svg class="width-16 height-16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
           </svg>
           (910) 759-3330
         </a><br>
-        <a href="mailto:miles2wisdom@gmail.com" style="color: #cbd5e1; display: inline-flex; align-items: center; gap: 8px; margin-top: 6px;">
-          <svg style="width: 16px; height: 16px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <a href="mailto:miles2wisdom@gmail.com" class="color-cbd5e1 display-inline-flex align-items-center gap-8 margin-top-6">
+          <svg class="width-16 height-16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <rect x="2" y="4" width="20" height="16" rx="2"></rect>
             <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
           </svg>
@@ -231,7 +231,7 @@
     <div>
       <strong>Navigate</strong>
       <ul>
-        <li><a href="index.html">Home</a></li>
+        <li><a href="../index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="services.html">Services</a></li>
       </ul>
@@ -244,16 +244,19 @@
       </ul>
     </div>
     <div class="footer-logo">
-      <img src="Logo.jpg" alt="Miles 2 Wisdom Logo">
+      <img src="../assets/images/Logo.jpg" alt="Miles 2 Wisdom Logo">
     </div>
     <div class="footer-copyright subtle">
       © <span id="year"></span> Miles 2 Wisdom Counseling Services, LLC.
+    </div>
+    <div class="footer-attribution subtle">
+      Made by <a href="https://Wisdomlayers.com/" target="_blank">Wisdomlayers</a>
     </div>
   </div>
 </footer>
 
 <!-- Main JavaScript -->
-<script src="scripts.js"></script>
+<script src="../assets/js/scripts.js"></script>
 
 </body>
 </html>
