@@ -1,0 +1,246 @@
+<!-- BOOK-A-CONSULTATION.HTML (Updated - CSS/JS in root) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Book a Consultation – Miles 2 Wisdom Counseling Services</title>
+<meta name="description" content="Start your healing journey with our streamlined consultation booking form." />
+<meta property="og:title" content="Book a Consultation – Miles 2 Wisdom Counseling Services" />
+<meta property="og:description" content="Begin your path to wellness with our caring team." />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="assets/images/Logo.jpg" />
+<meta name="theme-color" content="#A9C9FF" />
+
+<!-- Favicon -->
+<link rel="apple-touch-icon" sizes="180x180" href="assets/favicon_io/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon_io/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon_io/favicon-16x16.png">
+<link rel="manifest" href="assets/favicon_io/site.webmanifest">
+<link rel="shortcut icon" href="assets/favicon_io/favicon.ico">
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Lora:wght@400;600;700&display=swap" rel="stylesheet" />
+
+<!-- Main Stylesheet -->
+<link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+
+<!-- Header -->
+<header>
+  <div class="container nav">
+    <a class="brand" href="index.html">
+      <img src="assets/images/Logo.jpg" alt="Miles 2 Wisdom Logo" class="logo" />
+      <div class="brand-text">
+        <h1>Miles 2 Wisdom Counseling</h1>
+        <div class="tagline">Guiding You from Where You Are to Where You Want to Be</div>
+      </div>
+    </a>
+    <nav aria-label="Main Navigation">
+      <button class="menu-btn" aria-expanded="false" aria-controls="menu" aria-label="Toggle menu">☰</button>
+      <ul id="menu" role="menu">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/services">Services</a></li>
+        <li><a href="/team">Team</a></li>
+        <li><a href="/shop">Shop</a></li>
+        <li><a href="/consultation" class="btn">Book A Consultation</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="form-container">
+    <h1 class="page-title">Book a Consultation</h1>
+    <p class="lead">This streamlined form collects only the essential information needed to get started. We prioritize your privacy while ensuring we can provide the best possible care.</p>
+
+    <div class="form-grid">
+      <!-- Main Form Card -->
+      <div class="card" id="formCard">
+        <h2 style="margin-top: 0; margin-bottom: 24px; font-family: Lora, serif;">Consultation Information</h2>
+
+        <form id="consultationForm" method="post" action="https://formspree.io/f/mjkagdkb" novalidate>
+          <div class="field">
+            <label for="firstInitial">First Initial of First Name *</label>
+            <input id="firstInitial" name="firstInitial" type="text" required maxlength="1" placeholder="J" inputmode="text" />
+          </div>
+
+          <div class="field">
+            <label for="lastName">Last Name *</label>
+            <input id="lastName" name="lastName" type="text" required placeholder="Doe" autocomplete="family-name" />
+          </div>
+
+          <div class="field">
+            <label for="gender">Gender *</label>
+            <select id="gender" name="gender" required>
+              <option value="">Please select</option>
+              <option value="female">Female</option>
+              <option value="male">Male</option>
+              <option value="non-binary">Non-binary</option>
+              <option value="prefer-not-to-say">Prefer not to say</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="email">Email Address *</label>
+            <input id="email" name="email" type="email" required placeholder="you@example.com" autocomplete="email" />
+            <div class="field-help">We'll use this address only to contact you about scheduling and care.</div>
+          </div>
+
+          <div class="field">
+            <label>Reason for Visit *</label>
+            <div class="checkbox-group" role="group" aria-labelledby="reasonLabel">
+              <label class="checkbox-option">
+                <input type="checkbox" name="reason" value="new-patient-inquiry" />
+                <span>New patient inquiry</span>
+              </label>
+
+              <label class="checkbox-option">
+                <input type="checkbox" name="reason" value="individual-counseling" />
+                <span>Individual counseling</span>
+              </label>
+
+              <label class="checkbox-option">
+                <input type="checkbox" name="reason" value="couples-counseling" />
+                <span>Couples counseling</span>
+              </label>
+
+              <label class="checkbox-option">
+                <input type="checkbox" name="reason" value="family-counseling" />
+                <span>Family counseling</span>
+              </label>
+
+              <label class="checkbox-option">
+                <input type="checkbox" name="reason" value="general-questions" />
+                <span>General questions about services</span>
+              </label>
+
+              <label class="checkbox-option">
+                <input type="checkbox" name="reason" value="insurance-billing" />
+                <span>Questions about insurance or billing</span>
+              </label>
+
+              <label class="checkbox-option">
+                <input type="checkbox" name="reason" value="other" />
+                <span>Other</span>
+              </label>
+            </div>
+            <div id="reasonError" class="field-error" style="display: none;">Please select at least one reason for your visit.</div>
+          </div>
+
+          <div style="margin-top: 30px;">
+            <button type="submit" class="submit-btn">Submit Intake Form</button>
+            <div id="formMessage" class="form-message" role="status" aria-live="polite"></div>
+          </div>
+
+          <!-- Success Message -->
+          <div id="successMessage" class="success-card" role="status" aria-live="polite" aria-hidden="true">
+            <h3>Thank you – we will contact you soon</h3>
+            <p>Your form has been sent to our team at <strong>Miles2Wisdom@gmail.com</strong>. We will contact you within 24–48 hours to schedule your first appointment.</p>
+          </div>
+        </form>
+      </div>
+
+      <!-- Sidebar Card -->
+      <aside class="card sidebar-card">
+        <h3 style="margin-top: 0; font-family: Lora, serif;">Privacy & Next Steps</h3>
+
+        <div class="info-section">
+          <h4>Minimal Data Collection</h4>
+          <p>This form intentionally collects only essential information. We don't ask for sensitive medical details, addresses, or phone numbers at this stage.</p>
+        </div>
+
+        <div class="info-section">
+          <h4>What Happens Next?</h4>
+          <ul>
+            <li>We'll review your request within 24 hours</li>
+            <li>Our team will contact you to schedule your consultation</li>
+            <li>More detailed information will be gathered during your session</li>
+          </ul>
+        </div>
+
+        <div class="info-section">
+          <h4>Need Immediate Help?</h4>
+          <p>For urgent situations, contact emergency services at 911 or the crisis hotline at 988.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+</main>
+
+<!-- CTA Bar -->
+<section class="cta-bar">
+  <div class="cta-container">
+    <div class="cta-section">
+      <h3>Questions?</h3>
+      <p>CALL US AT <a href="tel:9107593330" style="color: inherit;"><strong>(910) 759-3330</strong></a> FOR ASSISTANCE WITH YOUR CONSULTATION.</p>
+      <a href="tel:9107593330" class="btn">Call Now</a>
+    </div>
+    <div class="cta-divider"></div>
+    <div class="cta-section">
+      <h3>Join Us</h3>
+      <p>WE ARE ALWAYS LOOKING FOR INCREDIBLE PEOPLE TO JOIN OUR TEAM!</p>
+      <a href="/apply-now" class="btn">Apply Now</a>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="container footgrid">
+    <div>
+      <strong>Miles 2 Wisdom Counseling Services, LLC</strong>
+      <p class="disclaimer">Not a crisis service. Call 911 or 988 in emergencies.</p>
+      <p style="margin-top: 10px;">
+       <a href="tel:9107593330" style="color: #cbd5e1; display: inline-flex; align-items: center; gap: 8px;">
+  <svg style="width: 16px; height: 16px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+  </svg>
+  (910) 759-3330
+</a><br>
+<a href="mailto:miles2wisdom@gmail.com" style="color: #cbd5e1; display: inline-flex; align-items: center; gap: 8px; margin-top: 6px;">
+  <svg style="width: 16px; height: 16px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+    <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+  </svg>
+  miles2wisdom@gmail.com
+</a>
+      </p>
+    </div>
+    <div>
+      <strong>Navigate</strong>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/services">Services</a></li>
+      </ul>
+    </div>
+    <div>
+      <strong>Connect</strong>
+      <ul>
+        <li><a href="https://www.facebook.com/Miles2Wisdom" target="_blank" rel="noopener">Facebook</a></li>
+        <li><a href="#" aria-label="LinkedIn coming soon">LinkedIn</a></li>
+      </ul>
+    </div>
+    <div class="footer-logo">
+      <img src="assets/images/Logo.jpg" alt="Miles 2 Wisdom Logo" />
+    </div>
+    <div class="footer-copyright subtle">
+      © <span id="year"></span> Miles 2 Wisdom Counseling Services, LLC.
+    </div>
+    <div class="footer-attribution subtle">
+      Made by <a href="https://Wisdomlayers.com/" target="_blank">Wisdomlayers</a>
+    </div>
+  </div>
+</footer>
+
+<!-- Main JavaScript -->
+<script src="assets/js/scripts.js"></script>
+
+</body>
+</html>
